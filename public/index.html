@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en"> <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<title>Space Business Tycoon | free-to-play browser game</title>
+	<meta name="author" content="JM Perez">
+	<meta name="keywords" content="Space, space business, business tycoon online, Business Simulation Game, Browser Based Business game, Sim Game, management game">
+	<meta name="description" content="Choose your nation, build a business empire and compete with other players to lead the humanity’s expansion throughout the Space">
+	
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">		
+	
+	<!-- Libs CSS -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/ionicons.css" rel="stylesheet">
+
+	<!-- Template CSS -->
+	<link href="css/style.css" rel="stylesheet">
+	<link id="favicon" rel="icon" type="image/vnd.microsoft.icon" href="data:image/vnd.microsoft.icon;base64,AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAAA/wAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAAA/wAAAP/MZmb/AAAA/wAAAP8AAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAAA/wAAAP//mZn/zGZm/8xmZv/MZmb/ZjMz/wAAAP8AAAD/AAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAAA/wAAAP8AAAEAAAABAAAAAP8AAAD/VVVV/wAAAP8AAAD//5mZ/8xmZv/MZmb/ZjMz/2YzM/8AAAD/AAAA/wAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAP9VVVX/AAAA/wAAAP8AAAD/VVVV/1VVVf+IiIj/iIiI/xEREf8AAAD/AAAA//+Zmf/MZmb/ZjMz/2YzM/9mMzP/AAAA/wAAAP8AAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAAA/wAAAP8AAAD/VVVV/1VVVf+IiIj/iIiI/7u7u/+7u7v/ERER/0RERP8AAAD/AAAA/wAAAP//mZn/zGZm/2YzM/9mMzP/ZjMz/wAAAP8AAAD/AAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAP8AAAD/VVVV/1VVVf+IiIj/iIiI/7u7u/+7u7v/3d3d/4iIiP+IiIj/ERER/0RERP9ERET/AAAA/wAAAP8AAAD//5mZ/8xmZv9mMzP/ZjMz/2YzM/8AAAD/AAAA/wAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAD/VVVV/1VVVf+IiIj/iIiI/7u7u/+7u7v/3d3d/xEREf8RERH/ERER/4iIiP+IiIj/AAAA/wAAAP8AAAEAAAABAAAAAQAAAAD/AAAA//+Zmf/MZmb/ZjMz/2YzM/9mMzP/AAAA/wAAAP8AAAEAAAABAAAAAQAAAAEAAAAA/1VVVf+IiIj/iIiI/7u7u/+7u7v/3d3d/4iIiP9ERET/iIiI/4iIiP+IiIj/ERER/wAAAP8AAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAAA/wAAAP//mZn/AAAA/wAAAP8AAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAD/iIiI/7u7u/8AAAD/M5mZ/4iIiP+IiIj/RERE/4iIiP/d3d3/u7u7/4iIiP9VVVX/AAAA/wAAAQAAAAEAAAAA/wAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAP8AAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAP+7u7v/3d3d/4iIiP8zmZn/iIiI/4iIiP8RERH/iIiI/93d3f+7u7v/iIiI/1VVVf8AAAD/AAABAAAAAQAAAAD/AAABAAAAAP8AAAD/AAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAP+IiIj/iIiI/4iIiP8AAAD/AAAA/wAAAP+IiIj/M5mZ/zOZmf+IiIj/VVVV/wAAAP8AAAEAAAABAAAAAP8AAAD/VVVV/1VVVf8AAAD/AAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAP8AAAD/AAAA/wAAAQAAAAEAAAAA/4iIiP8AAAD/M5mZ/4iIiP9VVVX/AAAA/wAAAP8AAAD/VVVV/93d3f+7u7v/VVVV/wAAAP8AAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAD/iIiI/93d3f+7u7v/iIiI/wAAAP8AAAD/VVVV/1VVVf/d3d3/3d3d/wAAAP8AAAD/AAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAP+IiIj/3d3d/wAAAP8AAAD/VVVV/93d3f+7u7v/VVVV/wAAAP8AAAD/AAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAAA/wAAAP8AAAD/VVVV/93d3f/d3d3/3d3d/wAAAP8AAAD/AAABAAAAAQAAAAEAAAABAAAAAQAAAAD/AAAA/wAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAAA/wAAAQAAAAEAAAABAAAAAP8AAAD/VVVV/93d3f/d3d3/3d3d/wAAAP8AAAD/AAABAAAAAQAAAAEAAAABAAAAAQAAAAD/AAAA/8xmZv/MZmb/AAAA/wAAAP8AAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAD/AAABAAAAAP8AAAD/AAAA/1VVVf/d3d3/3d3d/wAAAP8AAAD/iIiI/wAAAP8AAAEAAAABAAAAAQAAAAD/AAAA/8xmZv/MZmb/ZjMz/2YzM/9mMzP/ZjMz/wAAAP8AAAD/AAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAP8AAAD/AAAA/wAAAP+7u7v/VVVV/wAAAP8AAAD/VVVV/1VVVf8AAAD/AAAA/wAAAQAAAAD/AAAA/8xmZv/MZmb/ZjMz/2YzM/9mMzP/ZjMz/2YzM/9mMzP/ZjMz/2YzM/8AAAD/AAAA/wAAAQAAAAEAAAABAAAAAP8AAAD/AAAA/wAAAP/d3d3/3d3d/wAAAP8AAAD/IiIi/yIiIv8iIiL/VVVV/1VVVf8AAAD/AAAA/8xmZv/MZmb/zGZm/2YzM/9mMzP/ZjMz/2YzM/9mMzP/ZjMz/2YzM/8AAAD/AAAA/wAAAQAAAAEAAAABAAAAAQAAAAD/VVVV/wAAAP+7u7v/VVVV/wAAAP8AAAD/AAABAAAAAQAAAAD/AAAA/yIiIv8iIiL/AAAA//+Zmf/MZmb/zGZm/8xmZv9mMzP/ZjMz/2YzM/9mMzP/ZjMz/2YzM/8AAAD/AAAA/wAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAP/d3d3/3d3d/wAAAP8AAAD/AAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAAA/wAAAP8AAAD/AAAA/wAAAP//mZn/zGZm/8xmZv9mMzP/ZjMz/2YzM/8AAAD/AAAA/wAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAP8AAAD/AAABAAAAAQAAAAEAAAABAAAAAQAAAAD/AAAA/wAAAQAAAAD/iIiI/4iIiP8AAAD/AAAA/wAAAP8AAAD//5mZ/8xmZv8AAAD/AAAA/wAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAD/AAAA/8xmZv/MZmb/AAAA/wAAAP8AAAD/AAAA/4iIiP8AAAD/AAAA/wAAAQAAAAD/AAAA/wAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAD/AAAA/8xmZv/MZmb/ZjMz/2YzM/9mMzP/ZjMz/wAAAP8AAAD/AAAA/wAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAD/AAAA/8xmZv/MZmb/zGZm/2YzM/9mMzP/ZjMz/2YzM/9mMzP/ZjMz/2YzM/8AAAD/AAAA/wAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAD/AAAA/8xmZv/MZmb/zGZm/2YzM/9mMzP/ZjMz/2YzM/9mMzP/ZjMz/2YzM/8AAAD/AAAA/wAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAD/AAAA//+Zmf/MZmb/zGZm/8xmZv9mMzP/ZjMz/2YzM/9mMzP/ZjMz/2YzM/8AAAD/AAAA/wAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAAA/wAAAP//mZn/zGZm/8xmZv9mMzP/ZjMz/2YzM/8AAAD/AAAA/wAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAP8AAAD//5mZ/8xmZv8AAAD/AAAA/wAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAD/AAAA/wAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEA//9////8H///8Af//mAB//wAAH/8AAAf+AAAB/AAHAHgAH8H4ABv3+AAaf/wAGD/+MAA///AAf//wAf//8AfP/uAfA/6AHAD+ABAAOAAAAPAYAAPwfgAP+fIAP//ABP//AB///AAP//AAP//AAP//8AP///wP////P////////8=" />
+
+	<!-- Google Fonts -->
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,300,200,600,600italic,700">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Crimson+Text:400,400italic">
+
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+
+	<style>
+		#mapdiv {
+			width	: 100%;
+			height	: 230px;
+			border: 1px solid #fff;
+		}
+
+		#placeholder {
+			width: 100%;
+			height: 30px;
+			position: relative;
+			border: 1px solid #fff;
+			background: #fff;
+		}
+	</style>
+	
+</head>
+
+<body data-spy="scroll" data-target=".navigation">
+	
+	<!-- Navigation -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Start Logo / Text -->
+					<a class="navbar-brand text-logo" href="#"><i class="ion-planet"></i>Space Business Tycoon</a>
+					<!-- End Logo / Text -->
+				</div>
+			<!-- Navigation Links -->
+			<div class="navigation navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="#top-banner">Home</a></li>
+					<li><a href="#about">Back story</a></li>
+					<li><a href="login.html">Sign In</a></li>
+					<li><a href="register.html">Create account</a></li>
+				</ul>
+			</div>
+			<!-- End Navigation Links  -->
+		</div>
+	</nav>
+	<!-- End Navigation -->
+
+	<!-- Top Banner -->
+	<section id="top-banner" class="section padding-120 bg-solar-system">
+		<div class="bg-overlay"></div>
+		<div class="container">
+			<div class="row banner-content">
+
+				<div class="col-md-8 left-align">
+					<h1>Build your Space Empire!</h1>
+					<h3>Lead the humanity’s expansion throughout the Space</h3>
+					<ul class="banner-list"><!--Banner arrow list -->
+                       <li><strong>Space company simulation game</strong>. Expand your startup into a Global Empire. Develop your best strategy for growing your corporation into a multinational and multi-industry business. Invest, research, explore, mine, transport, manufacture, trade, spy and combat.</li>
+					   <li><strong>Alliance System</strong>. Players can unite efforts via corporation and nation alliances, international organizations (ESA) and diplomacy.</li>
+                       <li><strong>Social Projects</strong>. All corporations can help to get a Nation advantage. All the corporations has to push Technology and Science to go beyond new space frontiers.</li>
+                       <li>No downloads required. <strong>Free-to-play</strong> in any browser. Massively Multi-player persistent world on one universe server with unlimited simultaneous competing players.</li>
+					</ul>
+				</div>
+				
+				<div class="col-md-4">
+						<div class="banner-optin vertical-form">
+                            <div class="form-group">
+                                <button type="submit" onclick="location.href='register.html';" class="btn btn-default btn-submit">START PLAYING</button>
+                            </div>
+							<p>Choose your nation and start out as the CEO of a Space Tech Startup.</p>
+                            <div id="placeholder"></div>
+							<div id="mapdiv"></div>
+						</div>
+				</div>
+			
+			</div>
+		</div>
+	</section>
+	<!-- End Top Banner -->	
+	
+	<!-- Introduction -->
+	<section id="intro" class="section nopadding-bottom">
+		<div class="container">
+		
+			<!-- Section Title -->
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1 title">
+					<h1>Space pioneers wanted for the next business frontier</h1>
+					<p>Continue Elon Musk, Jeff Bezos, Paul Allen and Richard Branson work. Start as an entrepreneur at the Space industry.</p>
+				</div>
+			</div>
+			<!-- End Section Title -->
+			
+			<div class="row">
+		
+				<!-- Left Column Content -->
+				<div class="col-md-5 divider40-mobile">
+					<div class="text-justify">
+						<h3 class="left-align">Will you be the next <strong>Elon Musk</strong>?</h3>
+						<p>It’s pretty hard to get to another star system. Alpha Centauri is four light years away, so if you go at 10 per cent of the speed of light, it’s going to take you 40 years, and that’s assuming you can instantly reach that speed, which isn’t going to be the case.</p>
+						<p>If we can establish a Mars colony, we’ll have created a strong economic forcing function for the improvement of space travel. Once we have that forcing function, and an Earth-to-Mars economy, we’ll cover the whole Solar System. But the key is that we have to make the Mars thing work.
+						</p>
+					</div>
+					<div class="review-small">
+						<div class="review-text">
+							<p>If we’re going to have any chance of sending stuff to other star systems, we need to be laser-focused on becoming a multi-planet civilisation. That’s the next step.</p>
+						</div>
+						<div class="review-meta">
+                            <button class="btn-blue" style="width: 60%; float:right" onclick="location.href='register.html';">START PLAYING </button>
+							<img src="img/CEO-SpaceX-Elon-Musk.jpg" alt="SpaceX CEO Elon Musk" title="SpaceX CEO Elon Musk">
+							<h4>Elon Musk</h4>
+							<p>SpaceX CEO</p>
+
+						</div>
+					</div>
+				</div>
+				<!-- End Left Column Content -->
+			
+				<!-- Right Column Content -->
+				<div class="col-md-6 col-md-offset-1 intro-features">					
+					<!-- Main Points Row -->
+					<div class="row">
+						<div class="col-md-6 intro-feature">
+							<i class="font-icon ion-person-stalker"></i>
+							<h5>Be an Entrepreneur</h5>
+							<p>Apply for a Space Tech Bussiness Incubation Center and receive $2-$5 million as seed incentive.</p>
+						</div>
+						<div class="col-md-6 intro-feature">
+							<i class="font-icon ion-ios-lightbulb-outline"></i>
+							<h5>Stablish an Space Tech Startup</h5>
+							<p>Make your company profitable exploring space technology and its potentials. </p>
+						</div>
+					</div>
+					<!-- End Main Points -->
+					
+					<!-- Main Points Row -->
+					<div class="row">
+						<div class="col-md-6 intro-feature">
+							<i class="font-icon ion-earth"></i>
+							<h5>Expand your startup into a Global Empire</h5>
+							<p>Develop your best strategy for growing your corporation into a multinational and multi-industry business. </p>
+						</div>
+						<div class="col-md-6 intro-feature">
+							<i class="font-icon ion-planet"></i>
+							<h5>Help the humanity conquer the space</h5>
+							<p>Partner for collaborative efforts with your nation space agency and other companies to go beyond new frontiers. </p>
+						</div>
+					</div>
+					<!-- End Main Points -->
+					
+				</div>
+				<!-- End Left Column Content -->
+			</div>
+			
+			<hr/>
+			
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1 text-center">
+					<img src="img/journey-to-mars.jpeg"  class="img-responsive" alt="NASA Journey to Mars infographic" title="NASA Journey to Mars" />
+				</div>
+			</div>
+			
+		</div>
+	</section>
+	<!-- End Intro -->
+	
+	<!-- About -->
+	<section id="about" class="section bg-grey nopadding-bottom border-top border-bottom">
+		<div class="container">
+			
+			<div class="row">
+				<div class="col-md-6 col-md-offset-1">
+					<button class="btn-blue" style="width: 80%" onclick="location.href='register.html';">START PLAYING </button>
+					<img src="img/launch.jpg" alt="NASA SLS Space Launch System" title="NASA SLS Space Launch System" class="img-responsive" />
+				</div>
+
+				<div class="col-md-5 text-justify">
+					<h2>Back story</h2>
+					<p>Phosphorus, antimony, zinc, silver, gold, copper and rare earths are key elements
+                        needed for modern industry and food production. This resources could be depleted on Earth at year
+                        2060 due to the growing consumption in both developed and developing countries.</p>
+					<p>As our population grows (10 billions at 2050), exhausted fishable stocks and
+                        shortages of phosphate (affects crop growth), could cause starvation. So we need to find a
+                        sustainable supply of natural resources to fuel exploration in space and prosperity on earth.</p>
+                    <p>Private spaceflight companies and governments through their space agencies are investing to build the
+                        necessary infrastructures to gain control over the space resources and exploit them economically.</p>
+                    <p>Also, the list of governments that provide funding to develop a local space industry has
+                        begun to quickly increase in the form of Business Incubation Centres (BIC) and Aerospace Clusters.</p>
+                    <p>Apply to a Business Incubation Centre and take advantage of this great opportunity to make it big
+                        in space tech business.</p>
+
+
+                    <button class="btn-blue" style="width: 100%" onclick="location.href='register.html';">START PLAYING </button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End About -->
+
+
+	<!-- Video -->
+	<section id="video" class="section border-top bg-blue">
+		<div class="container">
+
+			<!-- Section Title -->
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 white-text title">
+					<h2>Video</h2>
+					<p>"All civilizations become either spacefaring or extinct." - Carl Sagan</p>
+				</div>
+			</div>
+			<!-- End Section Title -->
+
+				<!-- Video iframe -->
+				<div class="col-md-10 col-md-offset-1 col-xs-12 video-container">
+					<iframe src="//youtube.com/embed/YH3c1QZzRK4?ecver=2" allowfullscreen></iframe>
+				</div>
+				<!-- End Video -->
+
+		</div>
+	</section>
+	<!--End Video -->
+
+	<!-- Footer Top -->
+	<section class="footer footer-top">
+		<div class="container">
+			<div class="row">
+				<!-- Footer Intro  -->
+				<div class="col-md-4 col-sm-12">
+					<h3>Space Business Tycoon</h3>
+					<p>Free-to-play browser based space company simulation game.</p>
+					<p>Build your space tech business Empire! </p>
+				</div>
+				<!-- End Footer Intro  -->
+				<div class="col-md-4 col-sm-3 col-xs-6">
+					<h3>Larry Niven quote</h3>
+					<ul class="quick-links">
+						<li>The dinosaurs became extinct because they didn't have a space program.</li>
+					</ul>
+                    <p style="text-align: right"><a href="http://www.larryniven.net/" target="_blank">American hard science fiction writer</a></p>
+				</div>
+				<div class="col-md-2 col-sm-3 col-xs-6">
+					<h3>Tech Billionaires</h3>
+					<ul class="quick-links">
+						<li><a href="https://twitter.com/jeffbezos" target="_blank">Jeff Bezos</a></li>
+						<li><a href="https://twitter.com/elonmusk" target="_blank">Elon Musk</a></li>
+						<li><a href="https://twitter.com/richardbranson" target="_blank">Richard Branson</a></li>
+					</ul>
+				</div>
+				<div class="col-md-2 col-sm-3 col-xs-6">
+                    <h3>&nbsp;</h3>
+					<ul class="quick-links">
+						<li><a href="https://twitter.com/paulgallen" target="_blank">Paul Allen</a></li>
+						<li><a href="https://twitter.com/roberttbigelow" target="_blank">Robert T. Bigelow</a></li>
+                        <li><a href="https://twitter.com/ericschmidt" target="_blank">Eric Schmidt</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Top Footer -->
+	
+	<!-- Footer Bottom -->	
+	<footer class="footer footer-sub">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-12">
+					<p>&copy; Dulce Bellum Inexpertis. All Rights Reserved</p>
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<p><a href="privacy.html" target="_blank">Privacy Policy</a> | <a href="terms.html"target="_blank">Terms & Conditions</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer Bottom -->
+	
+	<!-- Start Scroll To Top  -->
+	<a href="#" class="scroll-up"><i class="ion-android-arrow-up"></i></a>
+	<!-- End Scroll To Top  -->
+	
+	<!-- Start Js Files -->
+	<script type="text/javascript" src="js/jquery-2.1.0.min.js"></script><!--jQuery is a Javascript library that greatly reduces the amount of code that you must write.-->
+	<script src="js/bootstrap.min.js" type="text/javascript"></script><!--Packed with many functionalies such as carousel slider, responsive attributes, tabs, drop downs, buttons, and many other features-->
+	<script src="js/modernizr.min.js" type="text/javascript"></script><!--Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.-->
+	<script src="js/custom.js" type="text/javascript"></script><!-- Script File containing all customizations  -->
+
+    <script src="//use.fontawesome.com/200749d157.js"></script>
+
+	<script src="//www.amcharts.com/lib/3/ammap.js"></script>
+	<script src="//www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
+	<script src="js/map.js" type="text/javascript"></script><!-- Script File containing map code  -->
+	<!-- End Js Files  -->
+
+</body>
+</html>
