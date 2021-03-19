@@ -28,6 +28,6 @@ AmCharts.ready(function() {
     var random = Math.floor(Math.random() * 15);
     var area = map.getObjectById(countries[random]);
     map.clickMapObject(area);
-    document.getElementById("placeholder").innerHTML = '<i class="ion-person"></i> New CEO starts at ' + area.title;
+    document.getElementById("placeholder").innerHTML = '<i class="ion-person"></i> New CEO starts in ' + area.title;
   }, 3500);
 });
